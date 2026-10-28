@@ -1,11 +1,12 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+
 public class PlayerController : MonoBehaviour
 {
-    Rigidbody2D playerRb;
-    Vector2 playerInput;
-    public float playerSpeed = 5f;
+    private Rigidbody2D playerRb;
+    private Vector2 playerInput;
+    [SerializeField] private float playerSpeed = 2f;
+    [SerializeField] private float jumpForce =  5f; 
 
     void Start()
     {
@@ -16,11 +17,26 @@ public class PlayerController : MonoBehaviour
     {
         PlayerMovement();
     }
-    public void OnMove(InputValue movementValue) //pega o input do movimento do player
+    public void OnMove(InputValue movementValue) 
     {
         playerInput = movementValue.Get<Vector2>();
     }
-    void PlayerMovement() //movimento do player + lado que esta olhando
+
+    public void OnJump(InputValue jumpValue)
+    {
+        if (jumpValue.isPressed)
+        {
+            Jump();
+        }
+     
+    }
+
+    private void Jump()
+    {
+        playerRb.linearVelocityY =  jumpForce; 
+    }
+
+    private void PlayerMovement()
     {
         playerRb.linearVelocityX = playerInput.x * playerSpeed; //movimenta o player no eixo X
     }
