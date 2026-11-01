@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3736361365238545242}
   - component: {fileID: 7180959940310030878}
   m_Layer: 0
-  m_Name: CinemachineCamera
+  m_Name: DefaultCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
   Priority:
-    Enabled: 0
-    m_Value: 0
+    Enabled: 1
+    m_Value: 1
   OutputChannel: 1
   StandbyUpdate: 2
   m_StreamingVersion: 20241001
