@@ -790,10 +790,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdbd9dd04f30fdd4bbf8f9e3fea82b8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  playerSpeed: 8
+  playerSpeed: 6
   jumpForce: 5
-  acceleration: 9
-  decceleration: 13
+  acceleration: 10
+  decceleration: 6
   velPower: 1.2
   isJumping: 0
 --- !u!114 &2125759342
@@ -833,7 +833,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125759336}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 18c300200ee36024eaa71516724aad36, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
