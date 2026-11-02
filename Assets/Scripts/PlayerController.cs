@@ -53,13 +53,17 @@ public class PlayerController : MonoBehaviour
                                                                   // se o player esta com 1 de velocidade, falta 4 para chegar no objetivo
         
         float accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? acceleration : decceleration; // se mathf.abs(targetSpeed) for maior que 0.01 o accelRate é acceleration
-                                                                                           // se não é decceleration. O mathf.Abs (Mathf.Absolution) apenas "remove"
+                                                                                           // se não é decceleration. O mathf.Abs (Mathf.Absolute) apenas "remove"
                                                                                            // o sinal negativo de qualquer número, para evitar que quando você ande
                                                                                            // para a esquerda o jogo entenda que você está desacelerando
         
-        float movement = Mathf.Pow(Mathf.Abs(speedDif) * accelRate, velPower) * Mathf.Sign(speedDif);
+        float movement = Mathf.Pow(Mathf.Abs(speedDif) * accelRate, velPower) * Mathf.Sign(speedDif); // acelera até a velocidade que quero chegar, respeitando
+                                                                                                      // os valores sempre positivos. O Mathf.Pow é uma potencia
+                                                                                                      // e faz o trabalho da suavização. O Mathf.Sign serve para pegar
+                                                                                                      // o sinal da diferença para dizer se estamos indo para a esquerda
+                                                                                                      // (negativo) ou direita (positivo)
 
-        playerRb.AddForce(movement * Vector2.right);
+        playerRb.AddForce(movement * Vector2.right); // adiciona força no vetor da direita (se negativa vai para esquerda)
     }
     private void Jump()
     {
