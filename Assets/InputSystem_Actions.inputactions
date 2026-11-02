@@ -19,7 +19,7 @@
                     "name": "Jump",
                     "type": "Button",
                     "id": "e3f7de8a-7d6e-4a2d-b1dd-2d2bde4dcf0d",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -140,6 +140,28 @@
                     "name": "",
                     "id": "7f8e9d0c-1b2a-4c3d-9e8f-0a1b2c3d4e5f",
                     "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0341012d-5e24-442b-b233-d4031b3a2ecf",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1d25a8c0-3c31-41bb-9e98-f7353d981611",
+                    "path": "<Gamepad>/leftStick/up",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
