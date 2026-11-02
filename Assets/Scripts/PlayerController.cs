@@ -10,10 +10,10 @@ public class PlayerController : MonoBehaviour
     Vector2 playerInput;
 
     [Header("Configurações do Player")]
-    [SerializeField] float playerSpeed = 8f;
+    [SerializeField] float playerSpeed = 6f;
     [SerializeField] float jumpForce = 5f;
-    [SerializeField] float acceleration = 9f;
-    [SerializeField] float decceleration = 13f;
+    [SerializeField] float acceleration = 10f;
+    [SerializeField] float decceleration = 6f;
     [SerializeField] float velPower = 1.2f;
 
     [Header("Checagem")]
