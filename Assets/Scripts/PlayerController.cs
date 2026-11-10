@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float playerSpeed = 6f;
     [SerializeField] float jumpForce = 5f;
     [SerializeField] float acceleration = 10f;
-    [SerializeField] float decceleration = 6f;
+    [SerializeField] float deceleration = 6f;
     [SerializeField] float velPower = 1.2f;
 
     [Header("Checagem")]
@@ -52,8 +52,8 @@ public class PlayerController : MonoBehaviour
         float speedDif = targetSpeed - playerRb.linearVelocity.x; // pega a diferença entre a velocidade que o player quer chegar com a velocidade atual, 
                                                                   // se o player esta com 1 de velocidade, falta 4 para chegar no objetivo
         
-        float accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? acceleration : decceleration; // se mathf.abs(targetSpeed) for maior que 0.01 o accelRate é acceleration
-                                                                                           // se não é decceleration. O mathf.Abs (Mathf.Absolute) apenas "remove"
+        float accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? acceleration : deceleration; // se mathf.abs(targetSpeed) for maior que 0.01 o accelRate é acceleration
+                                                                                           // se não é deceleration. O mathf.Abs (Mathf.Absolute) apenas "remove"
                                                                                            // o sinal negativo de qualquer número, para evitar que quando você ande
                                                                                            // para a esquerda o jogo entenda que você está desacelerando
         
